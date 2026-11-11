@@ -1,4 +1,6 @@
 What is the "document" variable in javascript?
+- mehrmals selbe frage, antwort immer etwas anders
+- um Eselbrücken zu finden: prompt "erkläre es für ein Kind"
 
 Die Variable "document" ist ein Objekt, das vom Browser bereitstellt wird. Das HTML-Sheet ist in eienr Form entahlten, dass JavaScript damit Elemente finden und ändern kann.
 z.B.: document.getElementById("myDiv")
