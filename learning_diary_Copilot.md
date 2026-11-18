@@ -5,3 +5,7 @@ TASK 1
 - um Eselbrücken zu finden: prompt "erkläre es für ein Kind"
 
 
+TASK 2
+- Copilot erkärt mir zu wenig, deswegen mache ich eine Combi aus CoPilot und cLaude
+- Copilot gibt mir nur den Code, dieses lass ich mir von Claude dann genauer erklären und stelle Rückfragen 
+
