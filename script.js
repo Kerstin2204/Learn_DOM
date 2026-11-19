@@ -35,3 +35,10 @@ submitBtn.addEventListener("click", () => {
   submitBtn.textContent = "Clicked!";
 });
 
+//TASK 5 (input)
+const nameInput = document.getElementById("name");
+const inputOutput = document.getElementById("myDiv");
+nameInput.addEventListener("input", () => {
+  inputOutput.textContent = nameInput.value ? `Name: ${nameInput.value}` : "Name cleared.";
+});
+

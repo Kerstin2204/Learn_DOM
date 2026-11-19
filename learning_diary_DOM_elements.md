@@ -137,4 +137,41 @@ Der Button hat den Typ "button". Das bedeutet: Ein Klick schickt kein Formular a
 
 
 
+# TASK 5 (input)
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+
+- id und name: Namen für das Feld. Mit der id findet man es im JavaScript-Code, und der name wird beim Absenden des Formulars mitgeschickt.
+- type: Die Art des Feldes, zum Beispiel text (Textfeld), checkbox (Kontrollkästchen) oder radio (Auswahlknopf).
+- value: Der Inhalt des Feldes. Bei einem Textfeld ist das der Text, den jemand eingetippt hat. Man kann ihn lesen oder ändern.
+- checked: Gilt nur für Kontrollkästchen und Radiobuttons. Es sagt, ob das Feld angehakt bzw. ausgewählt ist (true) oder nicht (false).
+- disabled: Sagt, ob das Feld gesperrt ist. Bei true kann man nichts mehr eingeben oder anklicken.
+- addEventListener("input", ...) oder addEventListener("change", ...): Damit sagt man dem Feld: “Wenn sich etwas ändert, führe diesen Code aus.”
+
+
+For example:
+const nameInput = document.getElementById("name");
+Das Textfeld mit der ID name wird gesucht und in der Variable nameInput gespeichert.
+
+console.log(nameInput.value);
+Der aktuelle Inhalt des Textfeldes wird in die Konsole geschrieben. Die Konsole sieht man in den Entwicklertools (meist mit F12). Wenn das Feld noch leer ist, erscheint nichts.
+
+nameInput.addEventListener("input", () => {
+  console.log(nameInput.value);
+});
+Hier wird festgelegt, was bei jeder Eingabe passiert. Sobald jemand einen Buchstaben tippt oder löscht, wird der neue Inhalt des Feldes in die Konsole geschrieben. Tippt jemand “Anna”, sieht man nacheinander: “A”, “An”, “Ann”, “Anna”.
+
+
+const agreeCheckbox = document.getElementById("agree");
+console.log(agreeCheckbox.checked);
+Das Kontrollkästchen mit der ID agree wird gesucht. Dann wird in die Konsole geschrieben, ob es angehakt ist: true bei einem Haken, false ohne Haken.
+
+Der Unterschied zwischen input und change
+input reagiert sofort bei jeder kleinen Änderung, also bei jedem getippten Buchstaben.
+change reagiert erst, wenn die Änderung abgeschlossen ist, bei einem Textfeld zum Beispiel, wenn man es verlässt. Bei Kontrollkästchen reagiert es direkt beim Anklicken.
+
+
+
+
+
 
