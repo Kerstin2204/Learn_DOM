@@ -108,4 +108,33 @@ Bei einer Checkbox liest man nicht .value, sondern .checked. Das ergibt true, we
 
 
 
+# TASK 5 (button)
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+
+- id: Der Name, mit dem man den Button im Code findet. Hier heißt er submitBtn.
+- textContent: Der Text, der auf dem Button steht. Im Moment ist das “Submit”. Man kann ihn lesen oder ändern.
+- type: Die Art des Buttons. Es gibt drei Arten: ein normaler Button (button), einer, der ein Formular abschickt (submit), und einer, der ein Formular zurücksetzt (reset).
+- disabled: Sagt, ob der Button gesperrt ist. Setzt man ihn auf true, kann man nicht mehr darauf klicken.
+- addEventListener("click", ...): Damit sagt man dem Button: “Wenn jemand auf dich klickt, führe diesen Code aus.”
+
+
+For example:
+const button = document.getElementById("submitBtn");
+Der Button wird anhand seiner ID gesucht und in der Variable button gespeichert. Ab jetzt steht button für diesen Button.
+
+button.textContent = "Save";
+Der Text auf dem Button wird von “Submit” auf “Save” geändert. Auf der Seite steht dann sofort “Save”.
+
+button.addEventListener("click", () => {
+  console.log("Button clicked");
+});
+Hier wird festgelegt, was bei einem Klick passiert. Jedes Mal, wenn jemand auf den Button klickt, schreibt der Browser “Button clicked” in die Konsole.
+
+Der Button hat den Typ "button". Das bedeutet: Ein Klick schickt kein Formular ab. Es passiert nur das, was man selbst im JavaScript-Code festlegt. Hätte der Button den Typ "submit", würde ein Klick zusätzlich das Formular absenden, in dem er steht.
+
+
+
+
+
 

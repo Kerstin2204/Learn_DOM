@@ -29,3 +29,9 @@ myForm.addEventListener("change", (event) => {
   formOutput.textContent = `${name} chose ${color}, ${size} and ${agreement}.`;
 });
 
+//TASK 5 (button)
+const submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("click", () => {
+  submitBtn.textContent = "Clicked!";
+});
+
