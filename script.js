@@ -15,3 +15,17 @@ myTable.tBodies[0].deleteRow(1);
 
 myTable.tHead.style.fontStyle = "italic";
 
+//TASK 5 (form)
+const myForm = document.getElementById("myForm");
+const formOutput = document.getElementById("myDiv");
+myForm.addEventListener("change", (event) => {
+  if (event.target.name !== "size" && event.target.name !== "agree") return;
+
+  const name = myForm.elements.namedItem("name").value.trim() || "Guest";
+  const color = myForm.elements.namedItem("color").value;
+  const selectedSize = myForm.querySelector('input[name="size"]:checked');
+  const size = selectedSize ? selectedSize.value : "no size selected";
+  const agreement = myForm.elements.namedItem("agree").checked ? "agreed" : "disagreed";
+  formOutput.textContent = `${name} chose ${color}, ${size} and ${agreement}.`;
+});
+

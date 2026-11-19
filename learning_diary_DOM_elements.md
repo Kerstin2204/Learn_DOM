@@ -81,4 +81,31 @@ myTable.tHead.style.fontStyle = "italic";
 
 
 
+# TASK 5 (form):
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+Ein form-Element ist im Browser ein DOM-Objekt mit Eigenschaften und Methoden. JavaScript kann damit lesen, was Nutzer eingegeben haben, Eingaben prüfen und das Formular zurücksetzen.
+- id:	Die Kennung des Formulars (myForm), mit der man es per getElementById findet
+- elements:	Sammlung aller Formularfelder (Textfeld, Auswahlmenü, Radiobuttons, Checkbox)
+- action:	Die URL, an die die Daten beim Absenden geschickt werden
+- method:	Die Sendemethode, meist GET (Daten in der URL) oder POST (Daten im Anfragekörper)
+- checkValidity():	Prüft, ob alle Felder gültig sind (z. B. required, minlength, type="email"), und gibt true oder false zurück
+- reset():	Setzt alle Felder auf ihre Anfangswerte zurück
+
+
+const form = document.getElementById("myForm");
+Holt das Formular-Element anhand seiner ID und speichert es in form.
+
+const name = form.elements.namedItem("name").value;
+Sucht in form.elements das Feld mit dem Attribut name="name" und liest dessen aktuellen Wert, also den Text, den der Nutzer eingetragen hat.
+
+const color = form.elements.namedItem("color").value;
+Dasselbe für das Feld color, wahrscheinlich ein <select>-Menü oder eine Radiobutton-Gruppe. Man erhält den ausgewählten Wert.
+
+const agreed = form.elements.namedItem("agree").checked;
+Bei einer Checkbox liest man nicht .value, sondern .checked. Das ergibt true, wenn sie angehakt ist, sonst false.
+
+
+
+
 
