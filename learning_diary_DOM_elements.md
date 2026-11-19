@@ -1,4 +1,4 @@
-TASK 1:
+# TASK 1:
 **what is the "document" variable in javascript?**
 - eingebauten objekt, dass die aktuell geladene Website darstellt (Struktur der Website)
 - ist der Einstiegspunkt zum DOM (Document Object Model)
@@ -25,7 +25,7 @@ Damit kann ich JavaScript sagen, was auf der Website tun soll. z.B. hinzufügen,
 
 
 
-TASK 2
+# TASK 2
 **How can I access the list "myTable" in the html file?**
 `myTable` ist eine Tabelle (keine Liste). Über ihre ID kann ich sie so auswählen:
 
@@ -43,6 +43,40 @@ tabelle.tBodies[0].rows[0].cells[1].textContent = "22";
 - rows[0] ist die erste Datenzeile Der Index beginnt bei 0.
 - cells[1] ist die zweite Zelle dieser Zeile, die Altersspalte.
 - textContent = "22" ersetzt den Text der Zelle. Es ist ein String. 
+
+ 
+
+
+
+# TASK 3 (together with Stephi)
+**table**
+const table = document.querySelector("#tabelle");
+rows, rows.length, rows[0].cells[9], caption, tHead, tBody, tFoot
+Alle Zellen durchlaufen:
+for (const row of table.rows) {
+  for (const cell of row.cells) {
+    console.log(cell.textContent);
+  }
+}
+----- damit kann man ganze Tabelle bearbeiten
+
+Zeile löschen:
+table.deleteRow(1) - gilt nur für Tabellen. Auch auf z.B. tBody anwendbar:
+table.tBodies[0].deleteRow(0);
+dann wird nur die 1. Zeile aus dem Body gelöscht.
+Eine Tabelle kann mehrere Bodies haben - da aufpassen
+
+Einen Style für alle Zellen im Body anwenden:
+for (const body of myTable.tBodies) {
+  body.style.fontStyle = "italic";
+}
+
+für tHead gehts einfacher:
+myTable.tHead.style.fontStyle = "italic";
+
+
+
+# TASK 4: Presentation
 
 
 
