@@ -49,3 +49,9 @@ colorSelect.addEventListener("change", () => {
   selectOutput.textContent = `Selected color: ${colorSelect.selectedOptions[0].text}`;
 });
 
+//TASK 5 (canvas)
+const canvas = document.getElementById("myCanvas");
+const context = canvas.getContext("2d");
+context.fillStyle = "blue";
+context.fillRect(10, 10, 100, 50);
+

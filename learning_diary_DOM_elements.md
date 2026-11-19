@@ -211,4 +211,37 @@ Das legt fest, was bei einer Änderung passiert. Immer wenn der Nutzer eine ande
 
 
 
+# TASK 5 (canvas)
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+
+Zeichenfläche auf der Webseite, auf der man mit JavaScript Formen, Text und Bilder zeichnen kann. Im Gegensatz zu den früheren Beispielen (Formular, Button, Eingabefeld, Auswahlmenü) gibt es hier keinen festen Inhalt, den man ausliest. Man malt selbst.
+
+Was man am Canvas ansprechen kann
+id: Der Name, mit dem man die Zeichenfläche im Code findet. Hier myCanvas.
+width und height: Die Breite und Höhe der Zeichenfläche in Pixeln.
+getContext("2d"): Gibt das eigentliche Zeichenwerkzeug zurück. Das Canvas selbst ist nur die leere Fläche. Gezeichnet wird mit dem sogenannten “Kontext”. Das "2d" bedeutet, dass man flach (zweidimensional) zeichnet.
+
+const canvas = document.getElementById("myCanvas");
+Die Zeichenfläche mit der ID myCanvas wird gesucht und in der Variable canvas gespeichert.
+
+const context = canvas.getContext("2d");
+Vom Canvas holt man sich das Zeichenwerkzeug und speichert es in context. Alle Zeichenbefehle laufen ab jetzt über context.
+
+context.fillStyle = "blue";
+Hier wird die Füllfarbe festgelegt: Blau. Das zeichnet noch nichts, es legt nur fest, womit die nächsten Formen gefüllt werden.
+
+context.fillRect(10, 10, 100, 50);
+Jetzt wird ein gefülltes Rechteck gezeichnet. Die vier Zahlen bedeuten der Reihe nach:
+
+10: Abstand vom linken Rand (x)
+10: Abstand vom oberen Rand (y)
+100: Breite des Rechtecks
+50: Höhe des Rechtecks
+Man bekommt also ein blaues Rechteck, 100 Pixel breit und 50 Pixel hoch, das 10 Pixel vom linken und vom oberen Rand entfernt beginnt. Wichtig: Die Zählung beginnt oben links. Mit größerem y wandert man nach unten.
+
+
+
+
+
 
