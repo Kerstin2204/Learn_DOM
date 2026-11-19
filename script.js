@@ -42,3 +42,10 @@ nameInput.addEventListener("input", () => {
   inputOutput.textContent = nameInput.value ? `Name: ${nameInput.value}` : "Name cleared.";
 });
 
+//TASK 5 (select/option)
+const colorSelect = document.getElementById("color");
+const selectOutput = document.getElementById("myDiv");
+colorSelect.addEventListener("change", () => {
+  selectOutput.textContent = `Selected color: ${colorSelect.selectedOptions[0].text}`;
+});
+

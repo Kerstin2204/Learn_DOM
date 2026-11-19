@@ -174,4 +174,41 @@ change reagiert erst, wenn die Änderung abgeschlossen ist, bei einem Textfeld z
 
 
 
+# TASK 5 (select/option)
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+
+Was man am <select> ansprechen kann
+- id und name: Namen für das Menü. Mit der id findet man es im Code, der name wird beim Absenden des Formulars mitgeschickt.
+- value: Der Wert der aktuell gewählten Option, zum Beispiel "red".
+- options: Eine Liste aller Optionen im Menü. Damit kann man alle Einträge durchgehen.
+- selectedIndex: Die Positionsnummer der gewählten Option. Gezählt wird ab 0, die erste Option hat also die Nummer 0, die zweite die Nummer 1 und so weiter.
+- disabled: Sagt, ob das ganze Menü gesperrt ist.
+
+Was man an jeder <option> ansprechen kann
+- value: Der Wert, der intern verwendet und beim Absenden mitgeschickt wird.
+- text: Der Text, den der Nutzer im Menü sieht.
+- selected: Sagt, ob diese Option gerade ausgewählt ist.
+- disabled: Sagt, ob man diese einzelne Option wählen kann.
+
+Mit value liest man, was intern gewählt ist. Mit text liest man, was der Nutzer auf dem Bildschirm sieht.
+
+const colorSelect = document.getElementById("color");
+Das Menü mit der ID color wird gesucht und in der Variable colorSelect gespeichert.
+
+console.log(colorSelect.value); // "red", "green", or "blue"
+Der Wert der gewählten Option wird in die Konsole geschrieben (die Konsole sieht man in den Entwicklertools, meist mit F12). Ist “Grün” gewählt, erscheint green. Der Kommentar dahinter sagt nur, welche drei Werte hier möglich sind.
+
+console.log(colorSelect.selectedOptions[0].text);
+Hier geht es um den sichtbaren Text statt um den Wert. selectedOptions ist eine Liste der gewählten Optionen. Bei einem normalen Menü ist da nur eine drin, und [0] holt diese erste. Mit .text bekommt man dann deren Beschriftung, zum Beispiel “Grün”.
+
+colorSelect.addEventListener("change", () => {
+  console.log(colorSelect.value);
+});
+Das legt fest, was bei einer Änderung passiert. Immer wenn der Nutzer eine andere Option wählt, wird der neue Wert in die Konsole geschrieben.
+
+
+
+
+
 
