@@ -9,3 +9,5 @@ TASK 2
 - Copilot erkärt mir zu wenig, deswegen mache ich eine Combi aus CoPilot und cLaude
 - Copilot gibt mir nur den Code, dieses lass ich mir von Claude dann genauer erklären und stelle Rückfragen 
 
+Zusammenfassend:
+eine kombination von Copilot und Claude ist für mich am sinnvollsten, da Claud es für ich eine spur verständlicher erklärt als Copilot, was natürlich auch daran liegen kann, dass ich mit Claude schon wesentlich länger arbeite als mit Copilot, wobei zu erwähnen ist, dass Copilot zur Codeerstellung und Korrektur, wesentlich sinnvoller und genauer ist.

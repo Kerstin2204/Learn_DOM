@@ -62,3 +62,8 @@ divElement.addEventListener("click", () => {
   divElement.style.backgroundColor = "lightblue";
 });
 
+//TASK 5 (ul)
+const myList = document.getElementById("myList");
+const newItem = document.createElement("li");
+newItem.textContent = "Hi Hi :)";
+myList.append(newItem);

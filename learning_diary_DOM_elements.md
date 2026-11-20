@@ -273,4 +273,30 @@ myDiv.addEventListener("click", () => {
 Hier wird festgelegt, was bei einem Klick passiert.
 
 
+# TASK 5 (ul)
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+Die Liste (<ul>) ist der Container, jeder <li> ist ein einzelner Eintrag darin.
+
+- id: Der Name, mit dem man die Liste im Code findet. Hier myList.
+- children: Eine Liste aller direkten Kind-Elemente, hier also aller <li>-Einträge. Man kann sie durchgehen oder einzeln ansprechen, zum Beispiel myList.children[0] für den ersten Eintrag.
+- childElementCount: Die Anzahl der Kind-Elemente. Das ist dasselbe wie children.length, nur direkt als Zahl.
+- textContent: Der gesamte Text in der Liste, alle Einträge zusammen. Wenn man ihn setzt, werden alle Einträge ersetzt. Das ist meistens nicht gewollt.
+- append(...): Fügt ein neues Element oder Text am Ende der Liste hinzu.
+- addEventListener(...): Reagiert auf Ereignisse wie Klicks auf die Liste.
+
+const myList = document.getElementById("myList");
+Die Liste mit der ID myList wird gesucht und in der Variable myList gespeichert.
+
+console.log(myList.children.length);
+children ist die Sammlung aller Einträge, .length ist deren Anzahl.
+
+const newItem = document.createElement("li");
+Ein neuer, leerer <li>-Eintrag wird erzeugt. Er existiert jetzt nur im Speicher und ist auf der Seite noch nicht zu sehen.
+
+newItem.textContent = "New item";
+Der neue Eintrag bekommt seinen Text: “New item”
+
+myList.append(newItem);
+Jetzt wird der neue Eintrag ans Ende der Liste gehängt. Erst ab diesem Moment erscheint er auf der Seite.
 
