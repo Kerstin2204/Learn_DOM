@@ -244,4 +244,33 @@ Man bekommt also ein blaues Rechteck, 100 Pixel breit und 50 Pixel hoch, das 10 
 
 
 
+# TASK 5 (div)
+**Which parameters of this DOM element can be accessed from javascript?**
+**What do these parameters do?**
+
+Container auf der Webseite. Ein <div> hat von sich aus kein besonderes Aussehen und keine feste Aufgabe. Man nutzt es, um Inhalte zu gruppieren, und mit JavaScript kann man Text, Aussehen und Verhalten steuern.
+
+Was man am <div> ansprechen kann
+- id: Der Name, mit dem man das <div> im Code findet. Hier myDiv.
+- textContent: Der Text, der im <div> steht. Man kann ihn lesen oder ersetzen.
+- style: Das Aussehen direkt am Element, zum Beispiel Farben, Größen oder Abstände. Man ändert damit CSS-Eigenschaften per Code.
+- classList: Die CSS-Klassen des Elements. Damit kann man Klassen hinzufügen (add), entfernen (remove) oder prüfen (contains). Das ist praktisch, wenn man das Aussehen in einer CSS-Datei festlegt und im Code nur umschaltet.
+- children: Eine Liste aller Elemente, die direkt im <div> stehen, zum Beispiel Absätze oder Buttons.
+- addEventListener(...): Damit sagt man dem <div>: “Wenn etwas passiert (zum Beispiel ein Klick), führe diesen Code aus.”
+
+const myDiv = document.getElementById("myDiv");
+Das <div> mit der ID myDiv wird gesucht und in der Variable myDiv gespeichert.
+
+myDiv.textContent = "The text has changed.";
+Der Text im <div> wird ersetzt. Was vorher dort stand, ist weg, und auf der Seite steht jetzt “The text has changed.”
+
+myDiv.style.backgroundColor = "lightblue";
+Die Hintergrundfarbe wird auf Hellblau gesetzt.
+
+myDiv.addEventListener("click", () => {
+  console.log("The div was clicked");
+});
+Hier wird festgelegt, was bei einem Klick passiert.
+
+
 

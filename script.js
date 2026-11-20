@@ -55,3 +55,10 @@ const context = canvas.getContext("2d");
 context.fillStyle = "blue";
 context.fillRect(10, 10, 100, 50);
 
+//TASK 5 (div)
+const divElement = document.getElementById("myDiv");
+divElement.addEventListener("click", () => {
+  divElement.textContent = "This div was clicked.";
+  divElement.style.backgroundColor = "lightblue";
+});
+
